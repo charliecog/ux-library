@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    {{--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">--}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -22,20 +23,24 @@
         .fa-btn {
             margin-right: 6px;
         }
+
+        form.deleteForm {
+            display: inline;
+        }
     </style>
 </head>
 <body id="app-layout">
 <nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
+    {{--<div class="container">--}}
+        {{--<div class="navbar-header">--}}
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                Article List
+                Useful UX List
             </a>
-        </div>
+        {{--</div>--}}
 
-    </div>
+    {{--</div>--}}
 </nav>
 
 @yield('content')

@@ -24,13 +24,13 @@ Route::get('/', function(){
 
 Route::post('/article', function(Request $request){
     $validator = $request->validate([
-        'name' => 'required|max:255'
+        'name' => 'required|max:255',
+        'url' => 'required|max:255'
                                     ]);
-
-    
 
     $article = new Article;
     $article->name = $request->name;
+    $article->url = $request->url;
     $article->save();
 
     return redirect('/');
